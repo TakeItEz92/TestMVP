@@ -1,4 +1,4 @@
-package com.takeiteasy.vip.trymvp.view.activities;
+package com.takeiteasy.vip.trymvp.ui.activities;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -13,10 +13,10 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.takeiteasy.vip.trymvp.R;
-import com.takeiteasy.vip.trymvp.adapters.DataAdapter;
-import com.takeiteasy.vip.trymvp.model.FirebaseDataItem;
 import com.takeiteasy.vip.trymvp.presenter.MainPresenter;
 import com.takeiteasy.vip.trymvp.presenter.MainPresenterImpl;
+import com.takeiteasy.vip.trymvp.ui.adapters.DataAdapter;
+import com.takeiteasy.vip.trymvp.ui.models.DataAdapterItem;
 import com.takeiteasy.vip.trymvp.view.MainView;
 
 import java.util.List;
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
     }
 
     @Override
-    public void setItems(List<FirebaseDataItem> data) {
+    public void showItems(List<DataAdapterItem> data) {
         mAdapter.setNewData(data);
     }
 

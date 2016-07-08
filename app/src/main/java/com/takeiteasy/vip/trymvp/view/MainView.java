@@ -1,6 +1,6 @@
 package com.takeiteasy.vip.trymvp.view;
 
-import com.takeiteasy.vip.trymvp.model.FirebaseDataItem;
+import com.takeiteasy.vip.trymvp.ui.models.DataAdapterItem;
 
 import java.util.List;
 
@@ -10,6 +10,6 @@ import java.util.List;
 public interface MainView {
     void showProgress();
     void hideProgress();
-    void setItems(List<FirebaseDataItem> data);
+    void showItems(List<DataAdapterItem> data);
     void showError(String error);
 }

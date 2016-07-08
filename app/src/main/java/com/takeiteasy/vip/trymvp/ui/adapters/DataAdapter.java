@@ -1,4 +1,4 @@
-package com.takeiteasy.vip.trymvp.adapters;
+package com.takeiteasy.vip.trymvp.ui.adapters;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.takeiteasy.vip.trymvp.R;
-import com.takeiteasy.vip.trymvp.model.FirebaseDataItem;
+import com.takeiteasy.vip.trymvp.ui.models.DataAdapterItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.List;
  */
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
-    private List<FirebaseDataItem> data;
+    private List<DataAdapterItem> data;
 
     public DataAdapter() {
         data = new ArrayList<>();
@@ -30,9 +30,9 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        FirebaseDataItem item = data.get(position);
+        DataAdapterItem item = data.get(position);
         holder.uid.setText(item.getUid());
-        holder.name.setText(item.getUser_name());
+        holder.name.setText(item.getName());
         holder.sex.setText(item.getSex());
     }
 
@@ -41,7 +41,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
         return data.size();
     }
 
-    public void setNewData(List<FirebaseDataItem> data) {
+    public void setNewData(List<DataAdapterItem> data) {
         this.data.clear();
         this.data.addAll(data);
 

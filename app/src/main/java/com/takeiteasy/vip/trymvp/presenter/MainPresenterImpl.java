@@ -3,8 +3,10 @@ package com.takeiteasy.vip.trymvp.presenter;
 import com.takeiteasy.vip.trymvp.model.FirebaseDataItem;
 import com.takeiteasy.vip.trymvp.model.interactor.FirebaseApiInteractor;
 import com.takeiteasy.vip.trymvp.model.interactor.MainInteractorImpl;
+import com.takeiteasy.vip.trymvp.ui.models.DataAdapterItem;
 import com.takeiteasy.vip.trymvp.view.MainView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -44,7 +46,11 @@ public class MainPresenterImpl implements MainPresenter, FirebaseApiInteractor.F
     public void onLoadFinished(List<FirebaseDataItem> data) {
         if (view != null) {
             view.hideProgress();
-            view.setItems(data);
+            List<DataAdapterItem> list = new ArrayList<>();
+            for (FirebaseDataItem dataItem : data) {
+                list.add(new DataAdapterItem(dataItem));
+            }
+            view.showItems(list);
         }
     }
 
