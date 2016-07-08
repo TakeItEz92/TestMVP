@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "384934609450",
+    "firebase_url": "https://trymvp-fef59.firebaseio.com",
+    "project_id": "trymvp-fef59",
+    "storage_bucket": "trymvp-fef59.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:384934609450:android:3960ac57282f99ee",
+        "android_client_info": {
+          "package_name": "com.takeiteasy.vip.trymvp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "384934609450-19of667l09dlaiagsl14hcr1fjg3fjqp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBKaey-fK8eA17YEE1_wOVTvB8z2QcZRE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
