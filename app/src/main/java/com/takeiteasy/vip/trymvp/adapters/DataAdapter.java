@@ -31,9 +31,9 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         FirebaseDataItem item = data.get(position);
-        holder.uid.append(item.getUid());
-        holder.name.append(item.getUser_name());
-        holder.sex.append(item.getSex());
+        holder.uid.setText(item.getUid());
+        holder.name.setText(item.getUser_name());
+        holder.sex.setText(item.getSex());
     }
 
     @Override
@@ -44,6 +44,12 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     public void setNewData(List<FirebaseDataItem> data) {
         this.data.clear();
         this.data.addAll(data);
+
+        notifyDataSetChanged();
+    }
+
+    public void clean() {
+        this.data.clear();
 
         notifyDataSetChanged();
     }

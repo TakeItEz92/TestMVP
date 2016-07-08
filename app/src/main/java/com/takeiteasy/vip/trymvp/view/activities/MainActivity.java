@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements MainView {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mAdapter.clean();
                 mPresenter.loadData();
             }
         });
